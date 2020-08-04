@@ -26,14 +26,14 @@ const Formulario = () => {
         <fieldset className="text-center text-light">
             <legend>Busca Por Categoria o ingrediente</legend>
         </fieldset>
-        <div className="row ">
+        <div className="row mx-1">
             <div className="col-md-4">
                 <input type="text" name="nombre"
-                    className="form-control" placeholder="Buscar Por Ingrediente"
+                    className="form-control my-2" placeholder="Buscar Por Ingrediente"
                     onChange={obtenerDatosReceta} />
             </div>
             <div className="col-md-4">
-                <select className="form-control" name="categoria" onChange={obtenerDatosReceta}>
+                <select className="form-control my-2" name="categoria" onChange={obtenerDatosReceta}>
                     <option value=""  > --Selecciona Categoria--</option>
                     {
                         categorias.map(categoria => (
@@ -44,7 +44,7 @@ const Formulario = () => {
 
             </div>
             <div className="col-md-4">
-                <input type="submit" value="Buscar recetas" className="btn btn-block btn-primary" />
+                <input type="submit" value="Buscar recetas" className="btn btn-block btn-primary my-2 " />
             </div>
         </div>
     </form >
