@@ -16,15 +16,24 @@ const Formulario = () => {
         })
     }
 
+    const validarDatos = () => {
+        if (busqueda.nombre && busqueda.categoria) {
+            buscarRecetas(busqueda)
+            guardarConsulta(true)
+        }
+        else{
+            return alert("seleccionar ingrediente y categoria")
+        }
+    }
+
 
     return (<form onSubmit={e => {
-        e.preventDefault();
-        buscarRecetas(busqueda)
-        guardarConsulta(true)
+            e.preventDefault();
+            validarDatos();       
     }}
-        FclassName="col-12" >
+        className="col-12" >
         <fieldset className="text-center text-light">
-            <legend>Busca Por Categoria o ingrediente</legend>
+            <legend>Seleccionar ingrediente y la categoria deseada</legend>
         </fieldset>
         <div className="row mx-1">
             <div className="col-md-4">

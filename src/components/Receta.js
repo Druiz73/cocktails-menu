@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
         overflow: 'scroll',
         height: '100%',
         maxHeight: 450,
-        display: 'block'
+        
 
     },
 }));
@@ -53,12 +53,12 @@ const Receta = ({ receta }) => {
     const { setIdReceta, infoReceta, setInfoReceta } = useContext(ModalContext);
     //muestra y formatea los ingredientes
     const mostrarIngredientes = (receta) => {
-        console.log(receta)
+        
         let ingredientes = [];
         for (let index = 0; index < 16; index++) {
             if (receta[`strIngredient${index}`])
                 ingredientes.push(
-                    <li>{receta[`strIngredient${index}`]}{receta[`strMeasure${index}`]}</li>
+                    <li key={`strIngredient${index}`}>{receta[`strIngredient${index}`]}{receta[`strMeasure${index}`]}</li>
                 )
         }
         return ingredientes;
