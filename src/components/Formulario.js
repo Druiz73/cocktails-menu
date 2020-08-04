@@ -16,17 +16,17 @@ const Formulario = () => {
         })
     }
 
-    
+
     return (<form onSubmit={e => {
         e.preventDefault();
         buscarRecetas(busqueda)
         guardarConsulta(true)
     }}
         FclassName="col-12" >
-        <fieldset className="text-center">
+        <fieldset className="text-center text-light">
             <legend>Busca Por Categoria o ingrediente</legend>
         </fieldset>
-        <div className="row">
+        <div className="row ">
             <div className="col-md-4">
                 <input type="text" name="nombre"
                     className="form-control" placeholder="Buscar Por Ingrediente"

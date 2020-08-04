@@ -13,7 +13,7 @@ function App() {
         <CategoriasProvider>
           <Header />
           <div className="container mt-5">
-            <div className="row">
+            <div className="row d-flex justify-content-center">
               <Formulario />
             </div>
 
